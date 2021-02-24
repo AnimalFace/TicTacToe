@@ -39,7 +39,8 @@ class App extends React.Component {
 
     return (
       <Styles>
-        Tic Tac Toe
+        <h2>Tic Tac Toe</h2>
+        <div>{`Player ${turn}'s turn`}</div>
         <div className="boardRow">
           <div className="boardSpace" onClick={() => (this.renderSpot([0, 0], board, turn))}>{board[0][0]}</div>
           <div className="boardSpace" onClick={() => (this.renderSpot([0, 1], board, turn))}>{board[0][1]}</div>
