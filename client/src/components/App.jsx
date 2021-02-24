@@ -41,21 +41,24 @@ class App extends React.Component {
       <Styles>
         <h2>Tic Tac Toe</h2>
         <div>{`Player ${turn}'s turn`}</div>
-        <div className="boardRow">
-          <div className="boardSpace" onClick={() => (this.renderSpot([0, 0], board, turn))}>{board[0][0]}</div>
-          <div className="boardSpace" onClick={() => (this.renderSpot([0, 1], board, turn))}>{board[0][1]}</div>
-          <div className="boardSpace" onClick={() => (this.renderSpot([0, 2], board, turn))}>{board[0][2]}</div>
-        </div>
-        <div className="boardRow">
-          <div className="boardSpace" onClick={() => (this.renderSpot([1, 0], board, turn))}>{board[1][0]}</div>
-          <div className="boardSpace" onClick={() => (this.renderSpot([1, 1], board, turn))}>{board[1][1]}</div>
-          <div className="boardSpace" onClick={() => (this.renderSpot([1, 2], board, turn))}>{board[1][2]}</div>
-        </div>
-        <div className="boardRow">
-          <div className="boardSpace" onClick={() => (this.renderSpot([2, 0], board, turn))}>{board[2][0]}</div>
-          <div className="boardSpace" onClick={() => (this.renderSpot([2, 1], board, turn))}>{board[2][1]}</div>
-          <div className="boardSpace" onClick={() => (this.renderSpot([2, 2], board, turn))}>{board[2][2]}</div>
-        </div>
+        <table className="board">
+          <tr className="boardRow">
+            <td className="boardSpace" onClick={() => (this.renderSpot([0, 0], board, turn))}>{board[0][0]}</td>
+            <td className="boardSpace" onClick={() => (this.renderSpot([0, 1], board, turn))}>{board[0][1]}</td>
+            <td className="boardSpace" onClick={() => (this.renderSpot([0, 2], board, turn))}>{board[0][2]}</td>
+          </tr>
+          <tr className="boardRow">
+            <td className="boardSpace" onClick={() => (this.renderSpot([1, 0], board, turn))}>{board[1][0]}</td>
+            <td className="boardSpace" onClick={() => (this.renderSpot([1, 1], board, turn))}>{board[1][1]}</td>
+            <td className="boardSpace" onClick={() => (this.renderSpot([1, 2], board, turn))}>{board[1][2]}</td>
+          </tr>
+          <tr className="boardRow">
+            <td className="boardSpace" onClick={() => (this.renderSpot([2, 0], board, turn))}>{board[2][0]}</td>
+            <td className="boardSpace" onClick={() => (this.renderSpot([2, 1], board, turn))}>{board[2][1]}</td>
+            <td className="boardSpace" onClick={() => (this.renderSpot([2, 2], board, turn))}>{board[2][2]}</td>
+          </tr>
+        </table>
+
       </Styles>
     );
   }

@@ -3,10 +3,21 @@ import styled from 'styled-components';
 const Styles = styled.div`
 
 .boardSpace {
-  display: inline-block;
+  display: table-cell;
   outline: 3px solid black;
-  width: 30%;
-  height: 30%;
+  width: 164px;
+  height: 164px;
+  text-align: center;
+}
+
+.boardRow {
+  display: table-row;
+}
+
+.board {
+  display: table;
+  height: 500px;
+  width: 500px;
 }
 
 `;
