@@ -8,6 +8,7 @@ const Styles = styled.div`
   width: 164px;
   height: 164px;
   text-align: center;
+  font-size: 100px;
 }
 
 .boardRow {
