@@ -6,8 +6,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      turn: 'x',
-      board: [[null, null, null],[null, null, null],[null, null, null]],
+      turn: 'X',
+      // board: [['X', 'X', 'X'], ['X', 'X', 'X'], ['X', 'X', 'X']],
+      board: [[null, null, null], [null, null, null], [null, null, null]],
       winner: null
     };
     this.renderSpot = this.renderSpot.bind(this);
@@ -24,21 +25,36 @@ class App extends React.Component {
       this.setState({
         board: newBoard
       })
-      if (turn === 'x') {
-        this.setState({turn: 'o'})
+      if (turn === 'X') {
+        this.setState({ turn: 'O' })
       }
-      if (turn === 'o') {
-        this.setState({turn: 'x'})
+      if (turn === 'O') {
+        this.setState({ turn: 'X' })
       }
     }
   }
 
   render() {
-    const { turn, board, winner } = this.state;
+    const { board, turn, winner } = this.state;
 
     return (
       <Styles>
         Tic Tac Toe
+        <div className="boardRow">
+          <div className="boardSpace" onClick={() => (this.renderSpot([0, 0], board, turn))}>{board[0][0]}</div>
+          <div className="boardSpace" onClick={() => (this.renderSpot([0, 1], board, turn))}>{board[0][1]}</div>
+          <div className="boardSpace" onClick={() => (this.renderSpot([0, 2], board, turn))}>{board[0][2]}</div>
+        </div>
+        <div className="boardRow">
+          <div className="boardSpace" onClick={() => (this.renderSpot([1, 0], board, turn))}>{board[1][0]}</div>
+          <div className="boardSpace" onClick={() => (this.renderSpot([1, 1], board, turn))}>{board[1][1]}</div>
+          <div className="boardSpace" onClick={() => (this.renderSpot([1, 2], board, turn))}>{board[1][2]}</div>
+        </div>
+        <div className="boardRow">
+          <div className="boardSpace" onClick={() => (this.renderSpot([2, 0], board, turn))}>{board[2][0]}</div>
+          <div className="boardSpace" onClick={() => (this.renderSpot([2, 1], board, turn))}>{board[2][1]}</div>
+          <div className="boardSpace" onClick={() => (this.renderSpot([2, 2], board, turn))}>{board[2][2]}</div>
+        </div>
       </Styles>
     );
   }
