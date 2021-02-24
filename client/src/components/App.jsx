@@ -113,7 +113,7 @@ class App extends React.Component {
             </tr>
           </tbody>
         </table>
-        <div>
+        <div className="buttonDiv">
         <button type="button" onClick={()=>(this.resetGame())}>New Game</button>
         </div>
 

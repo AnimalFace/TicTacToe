@@ -2,6 +2,16 @@ import styled from 'styled-components';
 
 const Styles = styled.div`
 
+h2 {
+  width: 500px;
+  text-align: center;
+}
+
+.buttonDiv {
+  width: 500px;
+  text-align: center;
+}
+
 .boardSpace {
   display: table-cell;
   outline: 3px solid black;
