@@ -116,11 +116,21 @@ class App extends React.Component {
         <div className="buttonDiv">
         <button type="button" onClick={()=>(this.resetGame())}>New Game</button>
         </div>
-
-
       </Styles>
     );
   }
 }
+
+// {for (let i = 0; while i < 3; i ++) {
+//   return (
+//     <tr className="boardRow">
+//       {for (let j = 0; j < 3; j++) {
+//         return (
+//           <td className="boardSpace" onClick={() => (this.renderSpot([${i}, ${j}], board, turn, Xmoves, Omoves, winner))}>{board[${i}][${j}]}</td>
+//         )
+//       }}
+//     </tr>
+//   )
+// }}
 
 export default App;
